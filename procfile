@@ -1,0 +1,1 @@
+web: java -jar target/chatspring3.3.3-SNAPSHOT.jar
