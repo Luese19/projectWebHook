@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ChatspringApplication<chatspring>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "luese.org.chatspring.ChatspringApplication",
+            "projectName": "chatspring",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
