@@ -85,6 +85,19 @@ function sendMessage(event) {
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 
+    if (message.type === 'TYPING') {
+        var typingElement = document.querySelector('.typing');
+        if (message.typing) {
+            typingElement.textContent = `${message.sender} is typing...`;
+            typingElement.classList.remove('hidden');
+            typingElement.classList.add('typing-animation'); // Add animation class
+        } else {
+            typingElement.classList.add('hidden');
+            typingElement.classList.remove('typing-animation'); // Remove animation class
+        }
+        return;
+    }
+
     var messageElement = document.createElement('li');
 
     if(message.type === 'JOIN') {

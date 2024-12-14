@@ -269,6 +269,16 @@ button:hover {
     display: none;
 }
 
+.typing-animation {
+    animation: typing 1s infinite;
+}
+
+@keyframes typing {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
 .app {
     display: flex;
     flex-direction: column;
