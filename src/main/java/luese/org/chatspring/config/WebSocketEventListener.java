@@ -1,6 +1,8 @@
 package luese.org.chatspring.config;
 
 import org.springframework.context.event.EventListener;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Component;
@@ -29,5 +31,11 @@ public class WebSocketEventListener {
                 .build();
             messageTemplate.convertAndSend("/topic/public", chatMessage);
         }
+    }
+
+    @MessageMapping("/chat.typing")
+    @SendTo("/topic/public")
+    public ChatMessage handleTyping(ChatMessage chatMessage) {
+        return chatMessage;
     }
 }

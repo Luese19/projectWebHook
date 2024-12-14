@@ -262,6 +262,13 @@ button:hover {
     display: none;
 }
 
+.typing {
+    color: #777;
+    font-size: 14px;
+    padding: 10px;
+    display: none;
+}
+
 .app {
     display: flex;
     flex-direction: column;
