@@ -21,5 +21,5 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.addEndpoint("/ws")
                 .setAllowedOriginPatterns("https://localhost:9191", "http://localhost:9191", "https://chatmate-4810d194b427.herokuapp.com") // Specify allowed origins
                 .withSockJS();
-    }
+    } 
 }
